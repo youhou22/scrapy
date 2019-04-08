@@ -10,7 +10,7 @@ class TianqispiderSpider(scrapy.Spider):
     start_urls = ['http://www.tianqihoubao.com/lishi/weinan.html']  # 起始网址
 
     def parse(self, response):
-        soup = BeautifulSoup(response.text, 'lxml')  # 利用beautifulsoup将当前页面的文字利用lxml解析器保存
+        soup = BeautifulSoup(response.text, 'lxml')  
         div = soup.find_all(name='div', class_='wdetail')
         lista = []
         for ul in div:
